@@ -38,5 +38,3 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           push: true
           tags: ${{ env.USERNAME }}/simplewhale:latest
-          cache-from: type=registry,ref=${{ env.USERNAME }}/simplewhale:buildcache
-          cache-to: type=registry,ref=${{ env.TOKEN }}/simplewhale:buildcache,mode=max
