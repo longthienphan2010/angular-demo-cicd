@@ -1,9 +1,8 @@
 #stage 1
 FROM node:16.14.0 as node
 
-WORKDIR /app
-
 COPY package*.json ./
+WORKDIR /app
 
 RUN npm install
 
