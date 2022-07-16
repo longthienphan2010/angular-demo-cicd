@@ -2,6 +2,7 @@
 FROM node:16.14.0 as node
 
 COPY package*.json ./
+RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
 RUN npm i
 WORKDIR /app
 COPY . .
