@@ -1,8 +1,8 @@
 #stage 1
 FROM node:16.14.0 as node
 
-COPY package*.json ./
 WORKDIR /app
+COPY package*.json ./
 RUN npm i
 COPY . .
 
