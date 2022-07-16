@@ -2,9 +2,11 @@
 FROM node:16.14.0 as node
 
 COPY package*.json ./
+RUN npm i && mkdir /app && cp -R ./node_modules ./app
+
 WORKDIR /app
 
-RUN npm install
+
 
 COPY . .
 
