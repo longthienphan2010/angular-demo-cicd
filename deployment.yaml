@@ -17,6 +17,7 @@ spec:
       containers:
         - name: angular
           image: thienlong95/simplewhale #Image that will be used to containers in the cluster
+          imagePullPolicy: Always
           ports:
             - containerPort: 80 #The port that the container is running on in the cluster
 ---
